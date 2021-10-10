@@ -28,23 +28,15 @@ int main()
             b[j+1] = key;
         }
 
-        int max, min, mid;
+        int max;
         
         for ( i = 0 ; i < n ; ++i) {
-            if (a[i] == b[0]) {
-                min = i + 1;
-            }
-
-            elif (a[i] == b[n/2]) {
-                mid = i + 1;
-            };
-
-            elif (a[i] == b[n-1]) {
+            if (a[i] == b[n-1]) {
                 max = i + 1;
             }
         }
 
-        fprint (fout, "%d %d %d", min, mid, max);
+        fprint (fout, "%d", max);
 
         free(a);
         free(b);
